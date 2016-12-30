@@ -1,0 +1,5 @@
+[run]
+include = zesco_football_club/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin

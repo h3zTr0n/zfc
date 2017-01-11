@@ -31,7 +31,8 @@ DJANGO_APPS = (
 
     # Useful template tags:
     # 'django.contrib.humanize',
-
+    # Grapelli
+    'grappelli',
     # Admin
     'django.contrib.admin',
 )
@@ -40,7 +41,17 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
-)
+    'easy_thumbnails',
+    'image_cropping',
+
+    # # django simple blog
+    # 'simpleblog',
+    # 'el_pagination',
+    # 'markdown_deux',
+    # 'django.contrib.humanize',
+    # 'pagedown',
+    )
+
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
@@ -267,3 +278,14 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+
+
+from easy_thumbnails.conf import Settings as thumbnail_settings
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
+
+# django simple blog settings
+# How long the length of the textarea should be.
+
+# MAX_LENGTH_TEXTAREA = 120

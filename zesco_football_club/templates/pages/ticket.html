@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load staticfiles i18n compress%}
+{% load crispy_forms_tags %}
+
+{% block main_container %}
+<!--
+<div class="container">
+
+<div class="row">
+
+<div class="contact-form">
+    <h2 class="text-center">Match Attendance Arrangements</h2>
+    <form method="post" action="/signin"  class="form-horizontal" role="form" align="center">
+        <div class="form-group form-horizontal" align="center">
+            <div class="col-sm-6">
+              {% crispy form %}
+
+            </div>
+        </div>
+
+
+    </form>
+</div>
+
+
+      </div>
+    </div>
+  -->
+
+<div class="container">
+
+    <div class="row">
+      <div class="col col-md-8">
+        <div id="contactform">
+          <h2 class="text-center">Match Attendance Reservations.</h2>
+
+          <form class="form">
+             {% crispy form %}
+          </form>
+        </div>
+      </div>
+
+      <hr>
+        <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+          <div class="panel panel-default">
+            <blockquote>
+              <div class="panel-heading bg-success">
+                <b>ZFC weekly updates</b>
+              </div>
+              <p>Weekly updates of the upcoming matches to be focused on this panel Weekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panelWeekly updates of the upcoming matches to be focused on this panel.</p>
+              <footer class="text-right">Dec.2016 Thursda, 10:00hrs<cite title="Source Title">Source Title</cite></footer>
+           </blockquote>
+          </div>
+      </div>
+
+    </div>
+</div>
+
+ {% block recent_news %}
+ {% endblock recent_news %}
+{% endblock main_container %}| {{ block.super }}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load staticfiles i18n compress%}
+
+{% block main_container %}
+
+<div class="heading">
+  <h1 class="text-center">Our History.</h1>
+</div>
+     <!-- /.container -->
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>View Club History.</h1>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+           Our rate of success in technology
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                <span class="sr-only">20% Succeeded</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object img-rounded" src="images/suit.jpg" width="80" height=80 alt="Instructor Alison Mukoma">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Meet The club manager(Coach)</h4>
+            <p>Description of our club manager comes here.</p>
+          </div>
+        </div>
+
+      </div>
+
+          <!--Sub topics of the page aligned-->
+      <div class="row">
+        {% for hist in history_list %}
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <h3>{{ hist.title }} |
+              <small>{{ hist.from_year }} - {{ hist.to_year }}</small>
+            </h3>
+
+            <p>ZESCO United Football Club is a Zambian professional football club based in Ndola that plays in the Zambian Premier league. Founded on January 1, 1974, the club have spent most of their history in the top tier of Zambian football.</p>
+          </div>
+          {% endfor %}
+          <!--
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3>The linux file system</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3>The linux file system</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3>The linux file system</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3>The linux file system</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3>The linux file system</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div> -->
+      </div>
+
+
+<hr />
+</div> <!-- End body container-->
+
+{% block recent_news %}
+{% endblock recent_news %}
+{% endblock main_container %}

@@ -31,8 +31,11 @@ DJANGO_APPS = (
 
     # Useful template tags:
     # 'django.contrib.humanize',
-    # Grapelli
-    'grappelli',
+
+    # django-jet-dashboard
+    'jet.dashboard',
+    # django-jet
+     'jet',
     # Admin
     'django.contrib.admin',
 )
@@ -288,4 +291,61 @@ THUMBNAIL_PROCESSORS = (
 # django simple blog settings
 # How long the length of the textarea should be.
 
-# MAX_LENGTH_TEXTAREA = 120
+# django-jet Configuration settings
+
+JET_THEMES = [
+    {
+        'theme': 'default', # theme folder name
+        'color': '#47bac1', # color of the theme's button in user menu
+        'title': 'Default' # theme title
+    },
+    {
+        'theme': 'green',
+        'color': '#44b78b',
+        'title': 'Green'
+    },
+    {
+        'theme': 'light-green',
+        'color': '#2faa60',
+        'title': 'Light Green'
+    },
+    {
+        'theme': 'light-violet',
+        'color': '#a464c4',
+        'title': 'Light Violet'
+    },
+    {
+        'theme': 'light-blue',
+        'color': '#5EADDE',
+        'title': 'Light Blue'
+    },
+    {
+        'theme': 'light-gray',
+        'color': '#222',
+        'title': 'Light Gray'
+    }
+]
+
+
+JET_SIDE_MENU_CUSTOM_APPS = [
+    ('core', [ # Each list element is a tuple with application name (app_label) and list of models
+        'User',
+        'MenuItem',
+        'Block',
+    ]),
+    ('shops', [
+        'Shop',
+        'City',
+        'MetroStation',
+    ]),
+    ('feedback', [
+        'Feedback',
+    ]),
+]
+
+
+# JET_SIDE_MENU_CUSTOM_APPS = [
+#     ('core', ['__all__']),
+# ]
+JET_CHANGE_FORM_SIBLING_LINKS = True
+# JET_SIDE_MENU_COMPACT = True

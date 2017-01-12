@@ -48,6 +48,10 @@ from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Field, H
 
 
 class TicketForm(forms.ModelForm):
+    class Meta:
+        model = Ticket
+        exclude = ['timestamp']
+
     def __init__(self, *args, **kwargs):
 
         super(TicketForm, self).__init__(*args, **kwargs)
@@ -58,43 +62,27 @@ class TicketForm(forms.ModelForm):
         self.helper.form_action = 'Buy Ticket (s)'
         self.helper.layout = Layout(
             HTML("""<h3>Buy Ticket (s)</h3>"""),
-            Field(Field('first_name',),),
-            Field('last_name',),
-            Field('mobile',),
-            Field( Field('birthday'),),
-            Field( Field('house_number'),),
-            Field( Field('address_one'),),
-            Field( Field('address_two'),),
-            Field( Field('town_city'),),
-            Field( Field('postcode'),),
-            Field( Field('country'),),
-            Field( Field('priority_deposit'),),
-            Field( Field('number_of_seats'),),
+            Field('first_name'),
+            Field('last_name'),
+            Field('email'),
+            Field('mobile'),
+            Field('birthday'),
+            Field('house_number'),
+            Field('address'),
+            Field('town_city'),
+            Field('postcode'),
+            Field('country'),
+            Field('priority_deposit'),
+            Field('number_of_seats'),
         )
 
 
         # You can dynamically adjust your layout
         self.helper.layout.append(Submit('Submit', 'Submit', css_class='button warning') )
 
-    class Meta:
-        model = Ticket
-        exclude = ['timestamp']
-
-
-
-
-
-        class CustomerRegistrationForm(forms.Form):
-
-            def __init__(self, *args, **kwargs):
-                self.helper = FormHelper()
-                self.helper.form_action = 'customer_register'
-
-
-                self.helper.layout = Layout(
-                    HTML("""<h3>Create new customers account</h3>"""),
-                    Row(Field('first_name',),),
-                    Field('last_name',),
-                    Field('gender',),
-                    Row( Field('gender'),),
-                )
+    def save(self):
+        ticket = super(TicketForm, self).save(commit=False)
+        ticket.save()
+        return ticket
+        # self.request = kwargs.pop('request', None)
+        # return super(TicketForm, self).__init__(*args, **kwargs)

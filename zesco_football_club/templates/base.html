@@ -78,9 +78,11 @@
             </ul>
           </nav>
           <ul class="social list-inline">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="http://www.facebook.com/ZescoUnitedFc"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="http://www.twitter.com/ZescoUnitedFc"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://www.instagram.com/ZescoUnitedFc"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="http://www.youtube.com/user/ZescoUnitedFc"><i class="fa fa-youtube"></i></a></li>
+
           </ul>
           <button class="navbar-toggle">
             <i class="fa fa-list"></i>
@@ -98,10 +100,8 @@
     <div id="home-slider" class="owl-carousel owl-theme">
 
         <!-- Start Video Background -->
-
-
       <div class="item">
-        <img src="{% static 'img/slider/bg6.jpg' %}" alt="img background">
+        <img class="img-responsive" src="{% static 'img/slider/bg2.jpg' %}" alt="img background">
         <div class="slide-content col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 text-center">
           <h1>Team Ya Ziko</h1>
           <p>ZESCO United Football Club is a Zambian professional football club based in Ndola that plays in the Zambian Premier league. Founded on January 1, 1974, the club have spent most of their history in the top tier of Zambian football.</p>
@@ -109,7 +109,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="{% static "img/slider/bg2.jpg" %}" alt="">
+        <img class="img-responsive" src="{% static "img/slider/bg6.jpg" %}" alt="">
         <div class="slide-content col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 text-center">
           <h1>Team Ya Ziko</h1>
           <p>ZESCO United Football Club is a Zambian professional football club based in Ndola that plays in the Zambian Premier league. Founded on January 1, 1974, the club have spent most of their history in the top tier of Zambian football.</p>
@@ -117,7 +117,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="{% static "img/slider/bg4.jpg" %}" alt="">
+        <img class="img-responsive" src="{% static "img/slider/bg4.jpg" %}" alt="">
         <div class="slide-content col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 text-center">
           <h1>Team Ya Ziko</h1>
           <p>ZESCO United Football Club is a Zambian professional football club based in Ndola that plays in the Zambian Premier league. Founded on January 1, 1974, the club have spent most of their history in the top tier of Zambian football.</p>
@@ -137,17 +137,15 @@
 {% block main_container %}
   <!-- Start About -->
   <div id="about" class="about">
-
     <!-- Start Container -->
     <div class="container">
-
-      <!-- Start Preamble -->
-      <div class="preamble text-center col-lg-10 col-lg-offset-1">
-        <h4>About FC</h4>
-        <p>ZESCO United Football Club is a Zambian professional football club based in Ndola that plays in the Zambian Premier league. Founded on January 1, 1974, the club have spent most of their history in the top tier of Zambian football. </p>
-      </div>
-      <!-- End Preamble -->
-
+    <blockquote class="pull-left col-lg-12">
+      <h4>About FC</h4>
+         <p>The Club is registered under office of Registrar of Companies and Business names and is therefore referred to as Zesco United Football Club Limited.
+            The club is professionally run with all the Players, Technical Bench and Secretariat Staff being on full time employment basis.
+            ZUFC is affiliated to the Football Association of Zambia (FAZ), Confederation of African Football (CAF) and the Federation of International Football Association (FIFA). The club has pledged full compliance to the Club Licensing regulations and is committed to taking part in all forums organized by FAZ, CAF and FIFA for the implementation of Club Licensing.</p>
+         <small>by <cite>Zesco Football club</cite></small>
+    </blockquote>
     </div>
     <!-- End Container -->
 
@@ -169,7 +167,7 @@
           <ul class="nav nav-tabs list-inline experience" role="tablist">
             <li class="active"><a href="index.html#seniors-matches" role="tab" data-toggle="tab">Seniors</a>
             </li>
-            <li class=""><a href="index.html#juvenile-matches" role="tab" data-toggle="tab">Juvenile</a>
+            <li class=""><a href="index.html#juvenile-matches" role="tab" data-toggle="tab">Juniors</a>
             </li>
             <li class=""><a href="index.html#veterans-matches" role="tab" data-toggle="tab">Veterans</a>
             </li>
@@ -187,7 +185,7 @@
                   <img src="{% static 'img/team1.jpg' %}" alt="" class="team-background">
                   <img src="{% static 'img/team1-logo.png' %}" alt="" class="team-logo">
                   <figcaption>
-                    Lusaka Dynamos
+                    Nkhana Rangers
                   </figcaption>
                 </figure>
               </div>
@@ -199,7 +197,7 @@
                   <span>1</span>
                 </div>
                 <footer class="schedule">
-                  <span class="team-name">Ndola Stadium</span>
+                  <span class="team-name">Levy mwanawasa stadium</span>
                   <span class="time">30 May 23:00</span>
                 </footer>
               </div>
@@ -208,7 +206,7 @@
                   <img src="{% static 'img/team2.jpg' %}" alt="" class="team-background">
                   <img src="{% static 'img/logo1.png' %}"  alt="" class="team-logo">
                   <figcaption>
-                    ZescoFC
+                    Zesco United
                   </figcaption>
                 </figure>
               </div>
@@ -221,10 +219,10 @@
               <ul class="matches custom-list">
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming.png' %}" alt=""><span>AFC Consequat</span>
+                    <img src="{% static 'img/team-upcoming.png' %}" alt=""><span>Napsa Stars</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Ndola Stadium</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -234,10 +232,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Andrea FC</span>
+                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Naboye high school fc</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Ndola Stadium</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -247,33 +245,33 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Xavier United</span>
+                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Red Arrows</span>
                   </div>
                   <div class="schedule">
                     <span class="team-name">Independence Stadium.</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
-                    <span>Nkhana</span>
+                    <span>zesco fc</span>
                     <img src="{% static 'img/team-upcoming6.png' %}" alt="">
                   </div>
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming7.png' %}" alt=""><span>Azkalz FC</span>
+                    <img src="{% static 'img/team-upcoming7.png' %}" alt=""><span>Power Dynamos</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Woodlands Statium</span>
+                    <span class="team-name">Woodlands Stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
-                    <span>Zesco fc</span>
+                    <span>Napsa Stars</span>
                     <img src="{% static 'img/team-upcoming8.png' %}" alt="">
                   </div>
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Andrea FC</span>
+                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Naboye high school fc</span>
                   </div>
                   <div class="schedule">
                     <span class="team-name">Zesco fc</span>
@@ -286,10 +284,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Xavier United</span>
+                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Red Arrows</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Sao Paolo</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -354,10 +352,10 @@
               <ul class="matches custom-list">
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Andrea FC</span>
+                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Naboye high school fc</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Ndola stadium</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -367,7 +365,7 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming.png' %}" alt=""><span>AFC Consequat</span>
+                    <img src="{% static 'img/team-upcoming.png' %}" alt=""><span>Napsa Starts</span>
                   </div>
                   <div class="schedule">
                     <span class="team-name">Woodlands Stadium</span>
@@ -380,10 +378,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Xavier United</span>
+                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Red Arrows</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Ndola stadium</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -393,7 +391,7 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming7.png' %}" alt=""><span>Azkalz FC</span>
+                    <img src="{% static 'img/team-upcoming7.png' %}" alt=""><span>Power Dynamos</span>
                   </div>
                   <div class="schedule">
                     <span class="team-name">Levy mwanawasa stadium</span>
@@ -406,10 +404,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Andrea FC</span>
+                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Naboye high school fc</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Sao Paolo</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -452,7 +450,7 @@
                   <span>3</span>
                 </div>
                 <footer class="schedule">
-                  <span class="team-name">Sao Paolo</span>
+                  <span class="team-name">Levy mwanawasa stadium</span>
                   <span class="time">30 May 23:00</span>
                 </footer>
               </div>
@@ -474,10 +472,10 @@
               <ul class="matches custom-list">
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming7.png' %}" alt=""><span>Azkalz FC</span>
+                    <img src="{% static 'img/team-upcoming7.png' %}" alt=""><span>Power Dynamos</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Sao Paolo</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -487,10 +485,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Andrea FC</span>
+                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Naboye high school fc</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Sao Paolo</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -500,10 +498,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Xavier United</span>
+                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Red Arrows</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Sao Paolo</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -513,10 +511,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming.png' %}" alt=""><span>AFC Consequat</span>
+                    <img src="{% static 'img/team-upcoming.png' %}" alt=""><span>Napsa Stars</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Sao Paolo</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -526,10 +524,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Andrea FC</span>
+                    <img src="{% static 'img/team-upcoming3.png' %}" alt=""><span>Naboye high school fc</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Sao Paolo</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -539,10 +537,10 @@
                 </li>
                 <li class="match">
                   <div class="team text-left">
-                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Xavier United</span>
+                    <img src="{% static 'img/team-upcoming5.png' %}" alt=""><span>Red Arrows</span>
                   </div>
                   <div class="schedule">
-                    <span class="team-name">Sao Paolo</span>
+                    <span class="team-name">Levy mwanawasa stadium</span>
                     <span class="time">30 May 23:00</span>
                   </div>
                   <div class="team right text-right">
@@ -570,9 +568,9 @@
 
           <!-- Start Nav-Tabs -->
           <ul class="nav nav-tabs list-inline experience" role="tablist">
-            <li class="active"><a href="index.html#seniors-trainings" role="tab" data-toggle="tab">Seniors</a>
+            <li class="active"><a href="index.html#seniors-trainings" role="tab" data-toggle="tab">Senior Squard</a>
             </li>
-            <li class=""><a href="index.html#juvenile-trainings" role="tab" data-toggle="tab">Juvenile</a>
+            <li class=""><a href="index.html#juvenile-trainings" role="tab" data-toggle="tab">Juniors Squard</a>
             </li>
             <li class=""><a href="index.html#veterans-trainings" role="tab" data-toggle="tab">Veterans</a>
             </li>
@@ -872,36 +870,106 @@
   {% endblock main_container %}
 
   {% block recent_news %}
+    <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+          <h1 class="page-header text-center ">
+            Whats New
+          </h1>
 
-  <div class="container row-fluid" id="news">
-
-        <div class="page-header">
-          <h1 id="timeline">Recent News</h1>
-        </div>
+      <ul class="timeline">
         {% for post in post_list %}
-        <ul class="timeline col-md-12 col-sm-6 col-xs-12">
-
-        <!-- <ul class="timeline col-lg-12"> -->
-          <li>
-            <div class="timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">{{ post.title }}</h4>
-                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> posted on : {{ post.created }}</small></p>
-              </div>
-              <div class="timeline-body">
-                <p>
-                  {{ post.body }}
-                </p>
-              </div>
+        <li>
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="{% static 'img/news.jpg' %}" alt="" height="250" width="250">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>{{ post.title }}</h4>
+              <small class="subheading">{{ post.modified }}</small>
             </div>
-          </li>
-        </ul>
+            <div class="timeline-body">
+              <p class="text-muted">
+                 {{ post.body_summary }}              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
         {% endfor %}
+          <!--
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="http://lorempixel.com/250/250/cats/2" alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Step Two</h4>
+              <h4 class="subheading">Subtitle</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
 
+        <li>
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="http://lorempixel.com/250/250/cats/3" alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Step Three</h4>
+              <h4 class="subheading">Subtitle</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="http://lorempixel.com/250/250/cats/4" alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Step Three</h4>
+              <h4 class="subheading">Subtitle</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
 
-
-      </div> <!-- End main news container -->
+        <li>
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="http://lorempixel.com/250/250/cats/5" alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Bonus Step</h4>
+              <h4 class="subheading">Subtitle</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</div>
 
       {% endblock recent_news %}
 
@@ -964,9 +1032,9 @@
           <h5 class="widget-title">About FC</h5>
           <p>ZESCO United Football Club is a Zambian professional football club based in Ndola that plays in the Zambian Premier league. Founded on January 1, 1974, the club have spent most of their history in the top tier of Zambian football.</p>
           <ul class="contact-info custom-list">
-            <li><i class="fa fa-map-marker"></i><span>10 Milk Street #230 Boston, MA 02108</span></li>
-            <li><i class="fa fa-phone"></i><span>+1 (123) 456-7890</span></li>
-            <li><i class="fa fa-envelope"></i><span><a href="mailto:example@example.com">example@example.com</a></span></li>
+            <li><i class="fa fa-map-marker"></i><span>38A Lewanika Road, Town Centre.P O Box 76280 Ndola, Zambia.</span></li>
+            <li><i class="fa fa-phone"></i><span>+260966787348 / +260955787348 ( Chief Executive Off icer)</span></li>
+            <li><i class="fa fa-envelope"></i><span><a href="mailto:example@example.com">info@zescounitedfc.com</a></span></li>
           </ul>
         </div>
         <!--
@@ -982,16 +1050,11 @@
           <h5 class="widget-title">Support</h5>
           <ul class="custom-list">
             <li><a href="#">Terms and Conditions</a></li>
-            <li><a href="#">Website Accessibility Statement</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Account</a></li>
           </ul>
         </div>
 
         <div class="widget col-lg-6 col-md-3 col-sm-6 pull-right">
-          <h5 class="widget-title">Contact Form</h5>
+          <h5 class="widget-title">Enquiries</h5>
           <form action="home8.html#" class="contact-form default-form row">
             <div class="col-lg-6 col-md-6 col-sm-6 form-row">
               <input type="text" placeholder="Name">
@@ -1015,7 +1078,7 @@
         <h5 class="text-center">Sponsors</h5>
           {% for sponser in sponser_list %}
          <div class="sponsor-logo text-center col-lg-2 col-md-2 col-sm-4">
-            <img src="{{ sponser.logo.url }}" alt="" class="img-circle" height="85", width="150">
+            <img src="{{ sponser.logo.url }}" alt="" class="img-circle" height="87", width="150">
          </div>
 
         {% endfor %}

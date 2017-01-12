@@ -47,7 +47,7 @@ class BaseView(generic.ListView):
        context['juvenile_player'] = JuvenilePlayer.objects.all()
        context['veteran_player'] = VeteranPlayer.objects.all()
        context['senior_player'] = SeniorPlayer.objects.all()
-       context['ticket'] = Ticket.objects.all()
+    #    context['ticket'] = Ticket.objects.all()
        # And so on for more models
        return context
 
@@ -83,7 +83,7 @@ class HistoryView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HistoryView, self).get_context_data(**kwargs)
-        context['history_list'] = History.objects.all()[:5]
+        context['history_list'] = History.objects.all()
 
         # paginator = Paginator('history_list', 25) # Show 25 contacts per page
         # page = request.GET.get('page')
@@ -106,5 +106,43 @@ class TicketView(generic.FormView):
     form_class = TicketForm
     template_name = "pages/ticket.html"
 
+    def form_valid(self, form):
+        form.save(commit=True)
+        # self.messages.set_level(messages.WARNING)
+        return super(TicketView, self).form_valid(form)
+
     def get_success_url(self, *args, **kwargs):
-            return reverse_lazy('home')
+        return reverse_lazy('news:home')
+
+
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.send_email()
+        return super(TicketView, self).form_valid(form)
+
+
+#
+# from django.shortcuts import render, redirect
+# from django import forms
+# from django.utils import timezone
+#
+#     # from .forms import MyModelForm
+#
+#
+# def ticket_view(request):
+#
+#     if request.method == "POST":
+#         form = TicketForm(request.POST)
+#         if form.is_valid():
+#
+#             # commit=False means the form doesn't save at this time.
+#             # commit defaults to True which means it normally saves.
+#             model_instance = form.save(commit=False)
+#             model_instance.timestamp = timezone.now()
+#             model_instance.save()
+#             return redirect('news:home')
+#     else:
+#         form = TicketForm()
+#
+#     return render(request, "pages/ticket.html", {'form': form})

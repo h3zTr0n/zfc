@@ -15,11 +15,13 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     author = models.ForeignKey(Author)
     slug = models.SlugField()
+    body_summary = models.CharField(max_length=300)
     body = models.TextField()
     modified = models.DateTimeField(auto_now=True)
     img = models.ImageField(upload_to='news_uploaded_pics/%Y-%m-%d/',
                                 null=True,
                                 blank=True)
+
 
     created = models.DateTimeField(
             default=timezone.now)
@@ -104,9 +106,10 @@ class History(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField()
     body = models.TextField()
+    summary = models.CharField(max_length=300, help_text="300 characters for the summary filed.")
     from_year = models.DateField(auto_now_add=False, help_text="please use numbers: mm/dd/yyyy")
-    to_year = models.DateField(auto_now=False, help_text="please use numbers: mm/dd/yyyy")
-    img = models.ImageField()
+    to_year = models.DateField(auto_now=False, help_text="please use numbers: mm/dd/yyyy", null=True)
+    img = models.ImageField(blank=True)
 
     class Meta:
         verbose_name_plural = "Histories"
@@ -123,12 +126,10 @@ class Ticket(models.Model):
     '''
     first_name = models.CharField("First Name", max_length=255)
     last_name = models.CharField("Last Name", max_length=255)
-    email_address = models.EmailField("Email Address", max_length=255)
+    email_address = models.EmailField("Email Address")
     mobile = models.IntegerField("Phone Number")
     birthday = models.DateField("Date of Birth", help_text="format: yyyy-dd-mm", auto_now=False)
-    house_number = models.CharField("House Name/No", blank=True, max_length=255)
-    address_one = models.CharField("Address One", max_length=255)
-    address_two = models.CharField("Adress Two", max_length=255)
+    address = models.CharField("Home Address", max_length=255)
     town_city = models.CharField("Town or City", max_length=255)
     postcode = models.IntegerField("Postcode", default=10101)
     country = models.CharField("Country", max_length=255)
@@ -144,4 +145,4 @@ class Ticket(models.Model):
         ordering = ["-timestamp"]
 
     def __unicode__(self):
-        return "%s %s" % (self.first_name, self.last_name)
+        return self.first_name

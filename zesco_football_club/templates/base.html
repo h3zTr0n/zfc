@@ -96,7 +96,8 @@
   <!-- End Header -->
 
   <!-- Start Intro -->
-  <div class="intro">
+  {% block jumbotron %}
+  <div class="img-responsive intro">
     <div id="home-slider" class="owl-carousel owl-theme">
 
         <!-- Start Video Background -->
@@ -133,6 +134,8 @@
       <a class="btn next"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
+  {% endblock jumbotron %}
+
   <!-- End Intro -->
 {% block main_container %}
   <!-- Start About -->
@@ -635,7 +638,7 @@
                 </tr>
               </table>
               <footer>
-                <span>All practices will take place at Estadio Azteca in Mexico, unless noted.Practice dates and times are subject to change at any time.</span>
+                <span>All practices will take place at Levy Mwanawasa stdium in Ndola, unless noted.Practice dates and times are subject to change at any time.</span>
               </footer>
             </div>
           </div>
@@ -870,7 +873,7 @@
   {% endblock main_container %}
 
   {% block recent_news %}
-    <div class="container">
+    <div class="container" id="news">
   <div class="row">
     <div class="col-lg-12">
           <h1 class="page-header text-center ">
@@ -1012,7 +1015,7 @@
   <div class="twitter-widget loading">
     <div class="container">
       <div class="col-lg-12">
-        <i class="fa fa-twitter"></i>
+        <a href="http://www.twitter.com/ZescoUnitedFc"><i class="fa fa-twitter"></i></a>
         <div class="widget-content">
           <div class="twitter-feed paginated" data-id="uouapps" data-limit="3" data-interval="0"><span class="loading-anim"><span></span></span></div>
         </div>

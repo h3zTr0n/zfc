@@ -44,8 +44,8 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
-    'easy_thumbnails',
-    'image_cropping',
+    # 'easy_thumbnails',
+    # 'image_cropping',
 
     # # django simple blog
     # 'simpleblog',

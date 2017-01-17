@@ -349,3 +349,7 @@ JET_SIDE_MENU_CUSTOM_APPS = [
 # ]
 JET_CHANGE_FORM_SIBLING_LINKS = True
 # JET_SIDE_MENU_COMPACT = True
+
+
+# Manual setup
+DJANGO_SECRET_KEY='d@rkczcs!s8on6@ngvy5oon#fp+-(lcopsw#qfj--@a(zaaawi'

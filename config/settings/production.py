@@ -242,3 +242,7 @@ ADMIN_URL = env('DJANGO_ADMIN_URL')
 
 # Your production stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+
+
+# Manual setup
+DJANGO_SECRET_KEY='d@rkczcs!s8on6@ngvy5oon#fp+-(lcopsw#qfj--@a(zaaawi'

@@ -249,4 +249,4 @@ ADMIN_URL = env('DJANGO_ADMIN_URL')
 
 
 # Manual setup
-DJANGO_SECRET_KEY='d@rkczcs!s8on6@ngvy5oon#fp+-(lcopsw#qfj--@a(zaaawi'
+# DJANGO_SECRET_KEY='d@rkczcs!s8on6@ngvy5oon#fp+-(lcopsw#qfj--@a(zaaawi'
